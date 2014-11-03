@@ -10,6 +10,7 @@
 // Components
 @import "variables";
 @import "sc-icons";
+@import "devicons";
 @import "mixins";
 
 a, a:hover, a:focus, a:active, a.active {
@@ -22,6 +23,10 @@ a {
 
 a:hover, a:focus, a:active, a.active {
   color: darken($brand-primary, 10%);
+}
+
+.bg-light-gray {
+  background-color: $gray-lighter;
 }
 
 
@@ -239,4 +244,26 @@ section {
 .service-img {
   width: 80%;
   margin-bottom: 30px;
+}
+
+// Side icons
+
+i.aside {
+  float: left;
+  font-size: 80px;
+  padding: 5px 10px;
+}
+
+// Workshop
+
+.workshop {
+  margin-bottom: 30px;
+
+  h4 {
+    @include title-font();
+  }
+
+  ul {
+    margin-left: 80px;
+  }
 }
