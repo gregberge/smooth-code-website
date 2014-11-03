@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect');
-var sass = require('gulp-sass');
+var sass = require('gulp-ruby-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var usemin = require('gulp-usemin');
 var rev = require('gulp-rev');
@@ -18,8 +18,8 @@ gulp.task('buildServer', function() {
 gulp.task('sass', function () {
   return gulp.src('./scss/*.scss')
       .pipe(sass({
-        outputStyle: 'compressed',
-        includePaths: [
+        style: 'compressed',
+        loadPath: [
           './bower_components/bootstrap-sass-official/assets/stylesheets'
         ]
       }))
