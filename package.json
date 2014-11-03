@@ -25,6 +25,7 @@
     "gulp-usemin": "^0.3.8"
   },
   "dependencies": {
+    "compression": "^1.2.0",
     "express": "^4.10.1"
   },
   "engines": {
