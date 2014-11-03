@@ -29,6 +29,10 @@ a:hover, a:focus, a:active, a.active {
   background-color: $gray-lighter;
 }
 
+.btn {
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
 
 // Custom Navigation Bar
 
@@ -73,6 +77,7 @@ a:hover, a:focus, a:active, a.active {
     font-weight: 400;
     letter-spacing: 1px;
     color: white;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 
     &:hover, &:focus {
       color: $brand-primary;
@@ -266,4 +271,9 @@ i.aside {
   ul {
     margin-left: 80px;
   }
+}
+
+.references img {
+  height: 60px;
+  margin: 20px;
 }
