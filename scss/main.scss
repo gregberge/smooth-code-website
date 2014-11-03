@@ -149,6 +149,25 @@ header {
 }
 
 @media(min-width:768px) {
+  .navbar-header {
+    float: none;
+    text-align: center;
+  }
+
+  .navbar-brand {
+    float: none;
+  }
+
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none !important;
+    vertical-align: top;
+  }
+
+  .navbar .navbar-collapse {
+    text-align: center;
+  }
+
   header .intro-text {
     padding-top: 200px;
     padding-bottom: 200px;
@@ -168,6 +187,26 @@ header {
   }
 }
 
+@media(min-width:992px) {
+  .navbar-header {
+    float: left;
+    text-align: left;
+  }
+
+  .navbar-brand {
+    float: right;
+  }
+
+  .navbar .navbar-nav {
+    display: block;
+    float: right !important;
+  }
+
+  .navbar .navbar-collapse {
+    text-align: left;
+  }
+}
+
 // Global Section Styles
 
 section {
@@ -181,7 +220,7 @@ section {
     }
 
     h3.section-subheading {
-      font-size: 16px;
+      font-size: 18px;
       text-transform: none;
       font-style: italic;
       font-weight: 400;
@@ -197,7 +236,7 @@ section {
 
 // Services Section
 
-.service-heading {
-  margin: 15px 0;
-  text-transform: none;
+.service-img {
+  width: 80%;
+  margin-bottom: 30px;
 }
