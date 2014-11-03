@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "Smooth code website.",
   "private": true,
+  "scripts": {
+    "start": "node server",
+    "postinstall": "./node_modules/.bin/gulp build"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/neoziro/smooth-code-website.git"
@@ -18,5 +22,8 @@
     "gulp-sass": "^1.2.2",
     "gulp-uglify": "^1.0.1",
     "gulp-usemin": "^0.3.8"
+  },
+  "dependencies": {
+    "express": "^4.10.1"
   }
 }
