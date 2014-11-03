@@ -24,17 +24,17 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+                    <span class="sr-only">Afficher le menu</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Smooth Code</a>
+                <a class="navbar-brand page-scroll" href="#page-top"><i class="sc-logo"></i>SmoothCode</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="nav-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
@@ -43,13 +43,13 @@
                         <a class="page-scroll" href="#services">Expertises</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Formations</a>
+                        <a class="page-scroll" href="#workshop">Formations</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#team">Équipe</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">References</a>
+                        <a class="page-scroll" href="#clients">References</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -61,11 +61,61 @@
         <!-- /.container -->
     </nav>
 
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Des experts à votre service !</div>
+                <div class="intro-heading">Formations professionnelles pour développeurs</div>
+                <a href="#workshop" class="page-scroll btn btn-primary btn-lg">Découvrir nos formations</a>
+            </div>
+        </div>
+    </header>
+
+     <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Expertises</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">E-Commerce</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Responsive Design</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Web Security</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- build:js js/main.js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="js/header.js"></script>
     <!-- endbuild -->
 </body>
 

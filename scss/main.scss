@@ -1,11 +1,203 @@
-.navbar-brand {
-  width: 210px;
-  background: url(/img/brand.png);
-  background-size: auto 50px;
-  background-repeat: no-repeat;
 
-  // Hide the text.
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+// Bootstrap
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two&text=SmoothCode);
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,700);
+
+// Components
+@import "variables";
+@import "sc-icons";
+@import "mixins";
+
+a, a:hover, a:focus, a:active, a.active {
+  outline: none;
+}
+
+a {
+  color: $brand-primary;
+}
+
+a:hover, a:focus, a:active, a.active {
+  color: darken($brand-primary, 10%);
+}
+
+
+// Custom Navigation Bar
+
+.navbar-default {
+  background-color: $gray-darker;
+  border-color: transparent;
+
+  .navbar-brand {
+    padding: 8px 15px;
+    font-size: 2.2em;
+    font-family: $font-family-cursive;
+    color: $brand-primary;
+
+    i {
+      vertical-align: -2px;
+    }
+
+    &:hover, &:focus, &:active, &.active {
+      color: darken($brand-primary, 10%);
+    }
+  }
+
+  .navbar-collapse {
+    border-color: fade(white, 2%);
+  }
+
+  .navbar-toggle {
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+
+    .icon-bar {
+      background-color: white;
+    }
+
+    &:hover, &:focus {
+      background-color: $brand-primary;
+    }
+  }
+
+  .nav li a {
+    @include title-font();
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
+
+    &:hover, &:focus {
+      color: $brand-primary;
+      outline: none;
+    }
+  }
+
+  .navbar-nav > .active > a {
+    border-radius: 0;
+    color: white;
+    background-color: $brand-primary;
+  }
+
+  .navbar-nav > .active > a:hover,
+  .navbar-nav > .active > a:focus {
+    color: white;
+    background-color: darken($brand-primary, 10%);
+  }
+}
+
+@media(min-width:768px) {
+  .navbar-default {
+    background-color: transparent;
+    padding: 25px 0;
+    transition: padding 0.3s;
+    border: none;
+
+    .navbar-brand {
+      font-size: 3em;
+      transition: all 0.3s;
+    }
+
+    .navbar-nav > .active > a {
+      border-radius: 3px;
+    }
+  }
+
+  .navbar-default.navbar-shrink {
+    background-color: $gray-darker;
+    padding: 10px 0;
+
+    .navbar-brand {
+      font-size: 2em;
+    }
+  }
+}
+
+// Header
+
+header {
+  background-image: url('../img/header-bg.jpg');
+  background-repeat: none;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+
+  .intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    .intro-lead-in {
+      font-family: $font-family-cursive;
+      font-style: italic;
+      font-size: 22px;
+      line-height: 22px;
+      margin-bottom: 25px;
+    }
+
+    .intro-heading {
+      @include title-font();
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 50px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media(min-width:768px) {
+  header .intro-text {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    .intro-lead-in {
+      font-style: italic;
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: 25px;
+    }
+    .intro-heading {
+      font-weight: 700;
+      font-size: 70px;
+      line-height: 90px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+// Global Section Styles
+
+section {
+    padding: 100px 0;
+
+    h2.section-heading {
+      @include title-font();
+      font-size: 40px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    h3.section-subheading {
+      font-size: 16px;
+      text-transform: none;
+      font-style: italic;
+      font-weight: 400;
+      margin-bottom: 75px;
+    }
+}
+
+@media(min-width:768px) {
+  section {
+    padding: 150px 0;
+  }
+}
+
+// Services Section
+
+.service-heading {
+  margin: 15px 0;
+  text-transform: none;
 }
