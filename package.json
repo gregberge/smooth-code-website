@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "node server",
-    "postinstall": "bower install && gulp build"
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",

@@ -66,3 +66,4 @@ gulp.task('watch', function() {
 
 gulp.task('build', ['usemin', 'sass', 'copyFonts', 'copyImg']);
 gulp.task('default', ['devServer', 'watch', 'sass', 'copyFonts', 'copyImg']);
+gulp.task('heroku', 'build');
