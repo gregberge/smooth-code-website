@@ -17,6 +17,8 @@
     <!-- build:css css/main.css -->
     <link href="/build/css/main.css" rel="stylesheet">
     <!-- endbuild -->
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -114,7 +116,7 @@
             </div>
             <div class="row">
                 <div class="workshop col-md-6">
-                    <i class="devicons devicons-nodejs_small aside"></i>
+                    <i class="sc-nodejs aside"></i>
                     <h4>Formation node.js débutant</h4>
                     <ul class="text-muted">
                         <li>Se familiariser avec le développement asynchrone</li>
@@ -123,7 +125,7 @@
                     </ul>
                 </div>
                 <div class="workshop col-md-6">
-                    <i class="devicons devicons-nodejs_small aside"></i>
+                    <i class="sc-nodejs aside"></i>
                     <h4>Formation node.js avancé</h4>
                     <ul class="text-muted">
                         <li>Architecturer une application complexe</li>
@@ -132,7 +134,7 @@
                     </ul>
                 </div>
                 <div class="workshop col-md-6">
-                    <i class="devicons devicons-angular aside"></i>
+                    <i class="sc-angular aside"></i>
                     <h4>Formation AngularJS débutant</h4>
                     <ul class="text-muted">
                         <li>Comprendre les concepts d'AngularJS</li>
@@ -141,7 +143,7 @@
                     </ul>
                 </div>
                 <div class="workshop col-md-6">
-                    <i class="devicons devicons-angular aside"></i>
+                    <i class="sc-angular aside"></i>
                     <h4>Formation AngularJS avancé</h4>
                     <ul class="text-muted">
                         <li>Apprendre à architecturer une application AngularJS</li>
@@ -159,6 +161,11 @@
                     </ul>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="text-muted catchphrase">Pour des formations personnalisées, du développement spécifique ou tout autre demande n'hésitez pas à <a class="page-scroll" href="#contact">nous contacter</a>.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -168,27 +175,47 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Équipe</h2>
-                    <h3 class="section-subheading text-muted">Des experts avec une vraie expérience de production.</h3>
+                    <h3 class="section-subheading text-muted">Une équipe polyvalente à votre écoute qu'il s'agisse de formations ou de missions ponctuelles.</h3>
                 </div>
             </div>
             <div class="row text-center">
                 <div class="col-md-4">
-                    <img src="http://www.gravatar.com/avatar/8f436177476429e6348b75cbc37cd80a?s=800" class="img-circle" alt="Greg Bergé" width="60%">
-                    <h4>Greg Bergé</h4>
-                    <p class="text-muted">Expert node.js, AngularJS et Docker.</p>
-                    <p>Passionné depuis toujours par le web, Greg est un architecte et un développeur polyvalent très actif dans le monde de l'open source.</p>
+                    <div class="team-member">
+                        <img src="//www.gravatar.com/avatar/8f436177476429e6348b75cbc37cd80a?s=800" class="img-circle" alt="Greg Bergé" width="60%">
+                        <h4>Greg Bergé</h4>
+                        <p class="text-muted">Expert node.js, AngularJS et Docker.</p>
+                        <p>Passionné depuis toujours par le web, Greg est un architecte et un développeur polyvalent très actif dans le monde de l'open source.</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://twitter.com/neoziro" target="_blank"><i class="sc-twitter"></i></a></li>
+                            <li><a href="https://github.com/neoziro" target="_blank"><i class="sc-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/gregberge" target="_blank"><i class="sc-linkedin"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <img src="http://www.gravatar.com/avatar/d097875bc74600e024ef810a803b5cd0?s=800" class="img-circle" alt="Samuel Hurel" width="60%">
-                    <h4>Samuel Hurel</h4>
-                    <p class="text-muted">Expert node.js et AngularJS.</p>
-                    <p>Samuel est un développeur passioné, il a conçu de nombreuses application aujourd'hui utilisées en production chez TF1 ou Le Monde.</p>
+                    <div class="team-member">
+                        <img src="//www.gravatar.com/avatar/d097875bc74600e024ef810a803b5cd0?s=800" class="img-circle" alt="Samuel Hurel" width="60%">
+                        <h4>Samuel Hurel</h4>
+                        <p class="text-muted">Expert node.js et AngularJS.</p>
+                        <p>Samuel est un développeur passioné, il a conçu de nombreuses application aujourd'hui utilisées en production chez Le Figaro ou Le Monde.</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://github.com/IcanDivideBy0" target="_blank"><i class="sc-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/pub/samuel-hurel/59/518/456" target="_blank"><i class="sc-linkedin"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <img src="http://www.gravatar.com/avatar/667176b96540d167eb74f473c9aea5f7?s=800" class="img-circle" alt="Vincent Voyer" width="60%">
-                    <h4>Vincent Voyer</h4>
-                    <p class="text-muted">Expert node.js et automatisation.</p>
-                    <p>Vincent est un expert et un commiter node.js reconnu. Il a travaillé pour de nombreux grand comptes dont Le Monde et France Télévision.</p>
+                    <div class="team-member">
+                        <img src="//www.gravatar.com/avatar/667176b96540d167eb74f473c9aea5f7?s=800" class="img-circle" alt="Vincent Voyer" width="60%">
+                        <h4>Vincent Voyer</h4>
+                        <p class="text-muted">Expert node.js et automatisation.</p>
+                        <p>Vincent est un expert et un commiter node.js reconnu. Il a travaillé pour de nombreux grand comptes dont Le Monde et France Télévision.</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://twitter.com/zeroload" target="_blank"><i class="sc-twitter"></i></a></li>
+                            <li><a href="https://github.com/vvo" target="_blank"><i class="sc-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/vvoyer" target="_blank"><i class="sc-linkedin"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -216,6 +243,71 @@
             </div>
         </div>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Nous contacter</h2>
+                    <h3 class="section-subheading text-muted">Besoin d'aide ou d'une formation personnalisée ? Nous sommes à votre écoute.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Votre nom *" id="name" required data-validation-required-message="Vous devez entrer votre nom.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Votre Email *" id="email" required data-validation-required-message="Vous devez entrer votre email.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Votre téléphone *" id="phone" required data-validation-required-message="Vous devez entrer votre numéro de téléphone.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Votre Message *" id="message" required data-validation-required-message="Vous devez entrer un message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-primary btn-lg">Envoyer le message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; SmoothCode 2014</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="https://twitter.com/smoothcode" target="_blank"><i class="sc-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-right">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Mentions légales</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- build:js js/main.js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>

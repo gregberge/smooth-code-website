@@ -4,16 +4,19 @@
 @import "bootstrap/mixins";
 
 // Fonts
-@import url(//fonts.googleapis.com/css?family=Lobster+Two&text=SmoothCode);
+@import url(//fonts.googleapis.com/css?family=Lobster+Two:400);
 @import url(//fonts.googleapis.com/css?family=Cabin:400,700);
 
 // Components
 @import "variables";
 @import "sc-icons";
-@import "devicons";
 @import "mixins";
 
 a, a:hover, a:focus, a:active, a.active {
+  outline: none;
+}
+
+.btn:focus, .btn:active, .btn.active, .btn:active:focus {
   outline: none;
 }
 
@@ -259,6 +262,33 @@ i.aside {
   padding: 5px 10px;
 }
 
+// Team
+
+.team-member {
+  text-align: center;
+  margin-bottom: 50px;
+
+  img {
+    margin: 0 auto;
+  }
+
+  h4 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-transform: none;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}
+
+// Catchphrase
+
+.catchphrase {
+  font-size: 1.4em;
+}
+
 // Workshop
 
 .workshop {
@@ -276,4 +306,124 @@ i.aside {
 .references img {
   height: 60px;
   margin: 20px;
+}
+
+// Contact
+
+section#contact {
+  background-color: $gray-darker;
+
+  .section-heading {
+    color: white;
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+
+    input, textarea {
+      padding: 20px;
+    }
+
+    input.form-control {
+      height: auto;
+    }
+
+    textarea.form-control {
+      height: 242px;
+    }
+  }
+
+  .form-control:focus {
+    border-color: $brand-primary;
+    box-shadow: none;
+  }
+
+  ::-webkit-input-placeholder {
+     @include title-font();
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+     @include title-font();
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+     @include title-font();
+  }
+
+  :-ms-input-placeholder {
+     @include title-font();
+  }
+
+  .text-danger {
+    color: $brand-danger;
+  }
+}
+
+// Footer
+
+footer {
+  padding: 25px 0;
+  text-align: center;
+
+  span.copyright {
+    @include title-font();
+    line-height: 40px;
+    text-transform: none;
+  }
+
+  ul.quicklinks {
+    @include title-font();
+    margin-bottom: 0;
+    line-height: 40px;
+    text-transform: none;
+  }
+}
+
+// Social Buttons
+
+ul.social-buttons {
+  margin-bottom: 0;
+  li {
+    a {
+      display: block;
+      background-color: $gray-darker;
+      height: 40px;
+      width: 40px;
+      border-radius: 100%;
+      font-size: 20px;
+      line-height: 46px;
+      color: white;
+      outline: none;
+      transition: all 0.3s;
+
+      &:hover, &:focus, &:active {
+        background-color: $brand-primary;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Highlight Color Customization
+
+::-moz-selection {
+    text-shadow: none;
+    background: $brand-primary;
+}
+
+::selection {
+    text-shadow: none;
+    background: $brand-primary;
+}
+
+img::selection {
+    background: transparent;
+}
+
+img::-moz-selection {
+    background: transparent;
+}
+
+body {
+    webkit-tap-highlight-color: $brand-primary;
 }

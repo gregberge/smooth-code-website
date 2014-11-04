@@ -50,6 +50,11 @@ gulp.task('copyImg', function () {
   .pipe(gulp.dest('./build/img'));
 });
 
+gulp.task('copyFavicon', function () {
+  return gulp.src('./favicon.ico')
+  .pipe(gulp.dest('./build/favicon.ico'));
+});
+
 gulp.task('watch', function() {
   gulp.watch('./scss/*.scss', ['sass']);
 
@@ -64,6 +69,7 @@ gulp.task('watch', function() {
   });
 });
 
-gulp.task('build', ['usemin', 'sass', 'copyFonts', 'copyImg']);
-gulp.task('default', ['devServer', 'watch', 'sass', 'copyFonts', 'copyImg']);
+gulp.task('copy', ['copyFonts', 'copyImg', 'copyFavicon']);
+gulp.task('build', ['usemin', 'sass', 'copy']);
+gulp.task('default', ['devServer', 'watch', 'sass', 'copy']);
 gulp.task('heroku', ['build']);
