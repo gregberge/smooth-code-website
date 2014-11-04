@@ -52,7 +52,7 @@ gulp.task('copyImg', function () {
 
 gulp.task('copyFavicon', function () {
   return gulp.src('./favicon.ico')
-  .pipe(gulp.dest('./build/favicon.ico'));
+  .pipe(gulp.dest('./build'));
 });
 
 gulp.task('watch', function() {
