@@ -377,6 +377,14 @@ footer {
     line-height: 40px;
     text-transform: none;
   }
+
+  a {
+    color: $gray-darker;
+  }
+
+  a:hover, a:focus, a:active, a.active {
+    color: darken($gray-darker, 10%);
+  }
 }
 
 // Social Buttons
