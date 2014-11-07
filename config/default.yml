@@ -1,0 +1,4 @@
+server:
+  root: ./
+mandrill:
+  key: qPG5j47nBIU5-1ELf8MsLQ

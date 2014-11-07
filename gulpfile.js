@@ -1,18 +1,39 @@
 var gulp = require('gulp');
-var connect = require('gulp-connect');
 var sass = require('gulp-ruby-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var usemin = require('gulp-usemin');
 var rev = require('gulp-rev');
 var uglify = require('gulp-uglify');
 var minifyHtml = require('gulp-minify-html');
+var browserSync = require('browser-sync');
+var nodemon = require('gulp-nodemon');
+var config = require('./server/config');
 
-gulp.task('devServer', function() {
-  connect.server({livereload: true});
+console.log(config.server.port);
+
+gulp.task('browser-sync', ['dev-server'], function() {
+  browserSync.init(null, {
+    open: false,
+    proxy: 'http://localhost:' + config.server.port
+  });
 });
 
-gulp.task('buildServer', function() {
-  connect.server({root: './build'});
+gulp.task('dev-server', function() {
+  nodemon({
+    script: './server/index.js',
+    env: {
+      APP_ENV: 'development'
+    }
+  });
+});
+
+gulp.task('build-server', function() {
+  nodemon({
+    script: './server/index.js',
+    env: {
+      APP_ENV: 'staging'
+    }
+  });
 });
 
 gulp.task('sass', function () {
@@ -40,17 +61,17 @@ gulp.task('usemin', ['sass'], function () {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('copyFonts', function () {
+gulp.task('copy-fonts', function () {
   return gulp.src('./fonts/**/*')
   .pipe(gulp.dest('./build/fonts'));
 });
 
-gulp.task('copyImg', function () {
+gulp.task('copy-img', function () {
   return gulp.src('./img/**/*')
   .pipe(gulp.dest('./build/img'));
 });
 
-gulp.task('copyFavicon', function () {
+gulp.task('copy-favicon', function () {
   return gulp.src('./favicon.ico')
   .pipe(gulp.dest('./build'));
 });
@@ -58,18 +79,23 @@ gulp.task('copyFavicon', function () {
 gulp.task('watch', function() {
   gulp.watch('./scss/*.scss', ['sass']);
 
+  gulp.watch('./build/js/*.js', function () {
+    gulp.src('./build/js/*.js')
+    .pipe(browserSync.reload({stream: true}));
+  });
+
   gulp.watch('./build/css/*.css', function () {
     gulp.src('./build/css/*.css')
-    .pipe(connect.reload());
+    .pipe(browserSync.reload({stream: true}));
   });
 
   gulp.watch('./index.html', function () {
     gulp.src('./index.html')
-    .pipe(connect.reload());
+    .pipe(browserSync.reload({stream: true}));
   });
 });
 
-gulp.task('copy', ['copyFonts', 'copyImg', 'copyFavicon']);
+gulp.task('copy', ['copy-fonts', 'copy-img', 'copy-favicon']);
 gulp.task('build', ['usemin', 'sass', 'copy']);
-gulp.task('default', ['devServer', 'watch', 'sass', 'copy']);
+gulp.task('default', ['browser-sync', 'watch', 'sass', 'copy']);
 gulp.task('heroku', ['build']);
