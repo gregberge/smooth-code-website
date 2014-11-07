@@ -11,28 +11,16 @@ var config = require('./server/config');
 
 console.log(config.server.port);
 
-gulp.task('browser-sync', ['dev-server'], function() {
+gulp.task('browser-sync', ['server'], function() {
   browserSync.init(null, {
     open: false,
     proxy: 'http://localhost:' + config.server.port
   });
 });
 
-gulp.task('dev-server', function() {
+gulp.task('server', function() {
   nodemon({
-    script: './server/index.js',
-    env: {
-      APP_ENV: 'development'
-    }
-  });
-});
-
-gulp.task('build-server', function() {
-  nodemon({
-    script: './server/index.js',
-    env: {
-      APP_ENV: 'staging'
-    }
+    script: './server/index.js'
   });
 });
 

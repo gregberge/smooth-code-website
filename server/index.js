@@ -38,3 +38,10 @@ app.use(function(req, res) {
  */
 
 server.listen(process.env.PORT || config.server.port);
+
+server.on('listening', function onListening() {
+  console.info(
+    'Server is started: http://localhost:%d/',
+    server.address().port
+  );
+});

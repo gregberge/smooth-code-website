@@ -4,6 +4,7 @@ var yaml = require('js-yaml');
 var fs = require('fs');
 var defaultsDeep = require('merge-defaults');
 
+
 /**
  * Define config path.
  */
@@ -18,8 +19,7 @@ var defaultsConfig = readConfig('default');
 var envConfig = readConfig(process.env.APP_ENV || process.env.NODE_ENV || 'development');
 var args = minimist(process.argv.slice(2));
 
-module.exports = defaultsDeep({}, defaultsConfig, envConfig, args);
-
+module.exports = defaultsDeep(envConfig, defaultsConfig, args);
 
 /**
  * Read config file.

@@ -48,7 +48,7 @@ function contact(req, res) {
     message: message,
     async: false
   }, function (result) {
-    console.log('Email sent', result);
+    console.info('Email sent', result);
     res.send({ error: false });
   }, function (error) {
     res.status(500).send({ error: error });

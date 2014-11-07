@@ -1,4 +1,5 @@
 server:
   root: ./
+  port: 5000
 mandrill:
   key: qPG5j47nBIU5-1ELf8MsLQ
