@@ -27,7 +27,6 @@ var emailTemplate = fs.readFileSync(path.join(__dirname, 'email.html'), {encodin
  */
 
 function contact(req, res) {
-  console.log(req.body);
   if (! req.body.email || ! req.body.message)
     return res.status(400).send({
       error: { message: 'Email or message not found.' }
